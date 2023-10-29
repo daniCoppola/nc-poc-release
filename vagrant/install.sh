@@ -38,7 +38,7 @@ sudo adduser vagrant www-data
 # Install server
 wget https://anonymous.4open.science/r/nc-poc-release-C86D/e2ee.zip
 unzip e2ee.zip
-https://anonymous.4open.science/r/nc-poc-release-C86D/config.json
+wget https://anonymous.4open.science/r/nc-poc-release-C86D/config.json
 wget https://anonymous.4open.science/r/nc-poc-release-C86D/scripts/reset.sh 
 sudo chmod +x /home/vagrant/reset.sh 
 sudo /home/vagrant/reset.sh
