@@ -13,7 +13,7 @@ fi
 
 
 
-cp -r /home/vagrant/nextcloud /var/www/
+sudo cp -r /home/vagrant/nextcloud /var/www/
 
 
 
