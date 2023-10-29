@@ -39,8 +39,9 @@ sudo adduser vagrant www-data
 wget https://anonymous.4open.science/r/nc-poc-release-C86D/scripts/reset.sh 
 sudo chmod +x /home/vagrant/reset.sh 
 sudo /home/vagrant/reset.sh
-
-
+sudo a2dismod php8.2
+sudo a2dismod php7.4
+sudo systemctl restart apache2
 
 exit
 
