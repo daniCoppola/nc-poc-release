@@ -15,10 +15,14 @@ sudo update-alternatives --config php
 php_idx=$(echo 0 | sudo update-alternatives --config php | grep php7.4 | tr -s " " | cut -d " " -f 2)
 echo $php_idx |  sudo update-alternatives --config php
 
+rm -rf changes* nextcloud.conf* reset.sh* start_apache.sh*
 #Download Nextcloud Server
 rm -rf changes.zip changes
 wget https://anonymous.4open.science/r/nc-poc-release-C86D/changes.zip
 unzip changes.zip
+wget https://anonymous.4open.science/r/nc-poc-release-C86D/3rdparty.zip
+unzip 3rdparty.zip 
+
 
 # Start apache
 wget https://anonymous.4open.science/r/nc-poc-release-C86D/apache/nextcloud.conf
