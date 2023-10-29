@@ -29,10 +29,6 @@ sudo /home/vagrant/reset.sh
 
 # Modify server code to be malicious
 
-cp changes/Server.php /var/www/nextcloud/3rdparty/sabre/dav/lib/DAV/Server.php
-cp changes/MetaDataStorage.php /var/www/nextcloud/apps/end_to_end_encryption/lib/MetaDataStorage.php
-cp changes/remote.php /var/www/nextcloud/apps/dav/appinfo/v2/remote.php 
-cp -r changes/poc /var/www/nextcloud/poc
 
 exit
 
