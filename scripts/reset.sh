@@ -6,9 +6,10 @@ then
 	echo "Nextcloud already downloaded"
 else
 	cd /home/vagrant/
-	wget https://github.com/nextcloud/server/archive/refs/tags/v24.0.6.zip
-	unzip v24.0.6.zip
-	mv server-24.0.6 nextcloud
+	wget https://download.nextcloud.com/server/releases/nextcloud-24.0.12.zip
+	#wget https://github.com/nextcloud/server/archive/refs/tags/v24.0.6.zip
+	unzip v24.0.12.zip
+	mv server-24.0.12 nextcloud
 fi
 
 
