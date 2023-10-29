@@ -19,7 +19,8 @@ sudo cp -r /home/vagrant/nextcloud /var/www/
 
 echo -n "-Clean up database..."
 sudo mysql -e "CREATE USER IF NOT EXISTS 'username'@'localhost' IDENTIFIED BY 'password';"
-sudo mysql -e "DROP DATABASE nextcloud;CREATE DATABASE IF NOT EXISTS nextcloud CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;GRANT ALL PRIVILEGES ON nextcloud.* TO 'username'@'localhost';FLUSH PRIVILEGES"
+sudo mysql -e "DROP DATABASE nextcloud"
+sudo mysql -e "CREATE DATABASE IF NOT EXISTS nextcloud CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;GRANT ALL PRIVILEGES ON nextcloud.* TO 'username'@'localhost';FLUSH PRIVILEGES"
 echo "		done"
 
 sudo chown -R www-data:www-data /var/www/nextcloud
