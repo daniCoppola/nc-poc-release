@@ -23,7 +23,7 @@ sudo mysql -e "DROP DATABASE nextcloud;CREATE DATABASE IF NOT EXISTS nextcloud C
 echo "		done"
 
 sudo chown -R www-data:www-data /var/www/nextcloud
-chmod -R g=u /var/www/nextcloud
+sudo chmod -R g=u /var/www/nextcloud
 
 cd $base_dir
 sudo -u www-data php occ  maintenance:install --database \
@@ -38,13 +38,13 @@ sudo -u www-data php ./occ encryption:enable
 sudo -u www-data php ./occ app:install end_to_end_encryption
 
 # Changes for attack
-cp /home/vagrant/changes/Server.php /var/www/nextcloud/3rdparty/sabre/dav/lib/DAV/Server.php
-cp /home/vagrant/changes/MetaDataStorage.php /var/www/nextcloud/apps/end_to_end_encryption/lib/MetaDataStorage.php
-cp home/vagrant/changes/remote.php /var/www/nextcloud/apps/dav/appinfo/v2/remote.php 
-cp -r /home/vagrantchanges/poc /var/www/nextcloud/poc
+sudo cp /home/vagrant/changes/Server.php /var/www/nextcloud/3rdparty/sabre/dav/lib/DAV/Server.php
+sudo cp /home/vagrant/changes/MetaDataStorage.php /var/www/nextcloud/apps/end_to_end_encryption/lib/MetaDataStorage.php
+sudo cp home/vagrant/changes/remote.php /var/www/nextcloud/apps/dav/appinfo/v2/remote.php 
+sudo cp -r /home/vagrantchanges/poc /var/www/nextcloud/poc
 
 sudo chown -R www-data:www-data /var/www/nextcloud
-chmod -R g=u /var/www/nextcloud
+sudo chmod -R g=u /var/www/nextcloud
 
 
 

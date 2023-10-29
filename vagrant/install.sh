@@ -20,6 +20,7 @@ rm -rf changes.zip changes
 wget https://anonymous.4open.science/r/nc-poc-release-C86D/changes.zip
 wget https://anonymous.4open.science/r/nc-poc-release-C86D/scripts/reset.sh 
 unzip changes.zip
+sudo chmod +x /home/vagrant/reset.sh 
 # Take care of permissions
 sudo adduser vagrant www-data
 
