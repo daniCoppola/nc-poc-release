@@ -18,13 +18,18 @@ echo $php_idx |  sudo update-alternatives --config php
 #Download Nextcloud Server
 rm -rf changes.zip changes
 wget https://anonymous.4open.science/r/nc-poc-release-C86D/changes.zip
-wget https://anonymous.4open.science/r/nc-poc-release-C86D/scripts/reset.sh 
 unzip changes.zip
-sudo chmod +x /home/vagrant/reset.sh 
+
+# Start apache
+wget https://anonymous.4open.science/r/nc-poc-release-C86D/apache/nextcloud.conf
+wget https://anonymous.4open.science/r/nc-poc-release-C86D/apache/start_apache.sh
+sudo chmod +x /home/vagrant/start_apache.sh
+sudo /home/vagrant/start_apache.sh
 # Take care of permissions
 sudo adduser vagrant www-data
-
 # Install server
+wget https://anonymous.4open.science/r/nc-poc-release-C86D/scripts/reset.sh 
+sudo chmod +x /home/vagrant/reset.sh 
 sudo /home/vagrant/reset.sh
 
 
