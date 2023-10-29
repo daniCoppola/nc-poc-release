@@ -16,6 +16,7 @@ fi
 
 sudo cp -r /home/vagrant/nextcloud /var/www/
 sudo cp /home/vagrant/config.json /var/www/nextcloud/config
+sudo cp -r /home/vagrant/end_to_end_encryption /var/www/nextcloud/apps/
 
 echo -n "-Clean up database..."
 sudo mysql -e "CREATE USER IF NOT EXISTS 'username'@'localhost' IDENTIFIED BY 'password';"
@@ -36,11 +37,10 @@ sudo systemctl restart apache2.service
 echo "quantomipiacegiocare\nquantomipiacegiocare\n" | sudo -u www-data php ./occ user:add --display-name poc 1
 sudo -u www-data php  ./occ app:enable encryption
 sudo -u www-data php ./occ encryption:enable
-sudo -u www-data php ./occ app:install end_to_end_encryption
-sudo -u www-data php ./occ app:remove end_to_end_encryption
-sudo cp -r /home/vagrant/end-to-end-encryption /var/www/nextcloud/apps
-sudo chown -R www-data:www-data /var/www/nextcloud
 sudo -u www-data php ./occ app:enable end_to_end_encryption
+#sudo -u www-data php ./occ app:remove end_to_end_encryption
+#sudo chown -R www-data:www-data /var/www/nextcloud
+#sudo -u www-data php ./occ app:enable end_to_end_encryption
 
 
 
