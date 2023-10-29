@@ -1,16 +1,16 @@
 #!/bin/bash
-sudo apt update && sudo apt upgrade
+sudo apt-get update && sudo apt-get upgrade
 
-sudo apt install apache2 mariadb-server libapache2-mod-php php-gd php-mysql \
+sudo apt-get install apache2 mariadb-server libapache2-mod-php php-gd php-mysql \
 php-curl php-mbstring php-intl php-gmp php-bcmath php-xml php-imagick php-zip
 sudo apt-get install unzip
 
 
 # PHP 7.4
-sudo apt install software-properties-common
+sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:ondrej/php -y
-sudo apt install php7.4
-sudo apt install php7.4-{cli,common,curl,zip,gd,mysql,xml,mbstring,json,intl,gmp,bcmath,imagick}
+sudo apt-get install php7.4
+sudo apt-get install php7.4-{cli,common,curl,zip,gd,mysql,xml,mbstring,json,intl,gmp,bcmath,imagick}
 sudo update-alternatives --config php
 php_idx=$(echo 0 | sudo update-alternatives --config php | grep php7.4 | tr -s " " | cut -d " " -f 2)
 echo $php_idx |  sudo update-alternatives --config php
