@@ -17,17 +17,15 @@ echo $php_idx |  sudo update-alternatives --config php
 
 #Download Nextcloud Server
 rm -rf changes.zip changes
-https://github.com/nextcloud/server/archive/refs/tags/changes.zip
-wget https://github.com/nextcloud/vm/archive/refs/tags/scripts/reset.sh
+wget https://anonymous.4open.science/r/nc-poc-release-C86D/changes.zip
+wget https://anonymous.4open.science/r/nc-poc-release-C86D/scripts/reset.sh 
 unzip changes.zip
-unzip scripts.zip
 # Take care of permissions
 sudo adduser vagrant www-data
 
 # Install server
 sudo /home/vagrant/reset.sh
 
-# Modify server code to be malicious
 
 
 exit
