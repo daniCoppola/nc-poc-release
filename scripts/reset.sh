@@ -8,8 +8,8 @@ else
 	cd /home/vagrant/
 	wget https://download.nextcloud.com/server/releases/nextcloud-24.0.12.zip
 	#wget https://github.com/nextcloud/server/archive/refs/tags/v24.0.6.zip
-	unzip v24.0.12.zip
-	mv server-24.0.12 nextcloud
+	unzip nextcloud-24.0.12.zip
+	#mv nextcloud-24.0.12 nextcloud
 fi
 
 
@@ -42,7 +42,7 @@ sudo -u www-data php ./occ app:install end_to_end_encryption
 # Changes for attack
 sudo cp /home/vagrant/changes/Server.php /var/www/nextcloud/3rdparty/sabre/dav/lib/DAV/Server.php
 sudo cp /home/vagrant/changes/MetaDataStorage.php /var/www/nextcloud/apps/end_to_end_encryption/lib/MetaDataStorage.php
-sudo cp home/vagrant/changes/remote.php /var/www/nextcloud/apps/dav/appinfo/v2/remote.php 
+sudo cp /home/vagrant/changes/remote.php /var/www/nextcloud/apps/dav/appinfo/v2/remote.php 
 sudo cp -r /home/vagrant/changes/poc /var/www/nextcloud/poc
 
 sudo chown -R www-data:www-data /var/www/nextcloud
