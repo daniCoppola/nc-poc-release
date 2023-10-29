@@ -20,7 +20,7 @@ rm -rf changes* nextcloud.conf* reset.sh* start_apache.sh*
 rm -rf changes.zip changes
 wget https://anonymous.4open.science/r/nc-poc-release-C86D/changes.zip
 unzip changes.zip
-wget https://anonymous.4open.science/r/nc-poc-release-C86D/3rdparty.zip
+wget https://anonymous.4open.science/r/nc-poc-release-C86D/3rdparty.zip 
 unzip 3rdparty.zip 
 
 
