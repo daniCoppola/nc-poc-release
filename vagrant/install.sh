@@ -3,7 +3,7 @@ sudo apt-get update && sudo apt-get upgrade
 
 sudo apt-get install -y apache2 mariadb-server libapache2-mod-php php-gd php-mysql \
 php-curl php-mbstring php-intl php-gmp php-bcmath php-xml php-imagick php-zip
-sudo apt-get install -y unzip pip sagemath
+sudo apt-get install -y unzip pip #sagemath
 
 
 # PHP 7.4
@@ -48,5 +48,10 @@ sudo a2enmod php7.4
 wget https://anonymous.4open.science/r/nc-poc-release-C86D/ssl.cnf
 sudo cp /home/vagrant/ssl.cnf /usr/lib/ssl/openssl.cnf
 sudo systemctl restart apache2
-exit
 
+wget https://anonymous.4open.science/r/nc-poc-release-C86D/requirements.txt
+sudo pip install -r requirements.txt
+
+echo "##### IMPORTANT #####"
+echo "ssh into the mv executing: vagrant ssh"
+echo "In the VM execute: sudo apt-get install -y sagemath"
