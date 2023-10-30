@@ -11,7 +11,7 @@ mkdir vagrant
 cd vagrant
 wget https://anonymous.4open.science/r/nc-poc-release-C86D/vagrant/Vagrantfile https://anonymous.4open.science/r/nc-poc-release-C86D/vagrant/install.sh
 ```
-This downloads the vagrant scripts to spawn a virtual machine (VM) with aNextcloud server running on it.
+This downloads the vagrant scripts to spawn a virtual machine (VM) with a Nextcloud server running on it.
  
 The server can be accessed at [http://localhost:8888/nextcloud](http://localhost:8888/nextcloud) (if port 8888 is already being used, change it to a desired one).
 
@@ -21,7 +21,7 @@ vagrant up --provision
 ```
 This process may take a while, please bare with me :).
 
-Once the VM is running ssh into the VM (```vagrant ssh```) and execute
+Once the VM is running, ssh into the VM (```vagrant ssh```) and execute
 ```sudo apt-get install -y sagemath```
 and follow the installation instruction.
 
@@ -49,4 +49,8 @@ This code requires vagrant (version >= 2.2.19). We tested the PoC on the desktop
 [Nextcloud release website.](https://github.com/nextcloud/desktop/releases/download/v3.6.0)
 
 ### Running the attacks
-The files `notes/key_insertion_attack.md`, `notes/ghosy_key_attack.md`, `notes/IV_reuse.md` contain the description of how to execute each attack.
+The files 
+- [key_insertion_attack.md](https://anonymous.4open.science/r/nc-poc-release-C86D/notes/key_insertion_attack.md)
+- [ghost_key_attack.md](https://anonymous.4open.science/r/nc-poc-release-C86D/notes/ghost_key_attack.md)
+- [IV_reuse.md](https://anonymous.4open.science/r/nc-poc-release-C86D/notes/IV_reuse.md)
+contain the description of how to execute each attack.
