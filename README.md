@@ -27,7 +27,7 @@ and follow the installation instruction.
 
 At the end of this process you should be able to acces the server from outside the VM at [http://localhost:8888/nextcloud](http://localhost:8888/nextcloud)/. 
 A fresh user account with credentials: username:poc password:X3i69D.XBgId is created for you to log in with a Nextcloud client. 
-You can also create other users logging in with the admin account username:admin password:password.
+You can also create other users logging in with the admin account username:admin password:password or with the script [create_user.sh](https://anonymous.4open.science/r/nc-poc-release-C86D/scripts/create_user.sh).
 
 ### Client
 Our attacks are performed against the version 3.6 of Nextcloud client. 
