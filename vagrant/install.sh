@@ -3,7 +3,7 @@ sudo apt-get update && sudo apt-get upgrade
 
 sudo apt-get install -y apache2 mariadb-server libapache2-mod-php php-gd php-mysql \
 php-curl php-mbstring php-intl php-gmp php-bcmath php-xml php-imagick php-zip
-sudo apt-get install -y unzip
+sudo apt-get install -y unzip pip sagemath
 
 
 # PHP 7.4
