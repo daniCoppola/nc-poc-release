@@ -51,7 +51,7 @@ sudo cp /home/vagrant/changes/remote.php /var/www/nextcloud/apps/dav/appinfo/v2/
 sudo cp -r /home/vagrant/changes/poc /var/www/nextcloud/poc
 
 appdata=$(ls  data  | tr " " "\n"  | grep appdata)
-sed "s/placeholder/$appdata/" /home/vagrant/config.json /var/www/nextcloud/config/config.json.tmp
+sed "s/placeholder/$appdata/" /home/vagrant/config.json  > /var/www/nextcloud/config/config.json.tmp
 mv /var/www/nextcloud/config/config.json.tmp /var/www/nextcloud/config/config.json
 
 sudo chown -R www-data:www-data /var/www/nextcloud
