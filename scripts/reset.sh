@@ -50,8 +50,10 @@ sudo cp /home/vagrant/changes/MetaDataStorage.php /var/www/nextcloud/apps/end_to
 sudo cp /home/vagrant/changes/remote.php /var/www/nextcloud/apps/dav/appinfo/v2/remote.php 
 sudo cp -r /home/vagrant/changes/poc /var/www/nextcloud/poc
 
+appdata=$(ls  data  | tr " " "\n"  | grep appdata)
+sed "s/placeholder/$appdata" /var/www/nextcloud/config/config.json.tmp
+mv /var/www/nextcloud/config/config.json.tmp /var/www/nextcloud/config/config.json
+
 sudo chown -R www-data:www-data /var/www/nextcloud
 sudo chmod -R g=u /var/www/nextcloud
 
-appdata=$(ls  data  | tr " " "\n"  | grep appdata)
-sed "s/placeholder/$appdata" /var/www/nextcloud/config/config.json
