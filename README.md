@@ -1,4 +1,4 @@
-# PoC of the attack against Nextcloud E2EE
+# PoC of the attacks against Nextcloud E2EE
 
 This repo contains the code for testing the attacks against Nextcloud E2EE. It explains how to create an instance of Nextcloud server that performs the attack, and how to install a client for testing the attacks.
 
