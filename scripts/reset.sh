@@ -53,5 +53,5 @@ sudo cp -r /home/vagrant/changes/poc /var/www/nextcloud/poc
 sudo chown -R www-data:www-data /var/www/nextcloud
 sudo chmod -R g=u /var/www/nextcloud
 
-
-
+appdata=$(ls  data  | tr " " "\n"  | grep appdata)
+sed "s/placeholder/$appdata" /var/www/nextcloud/config/config.json
