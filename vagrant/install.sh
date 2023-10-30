@@ -21,7 +21,7 @@ chmod +x installer
 php installer
 sudo mv composer.phar /usr/local/bin/composer
 
-rm -rf changes* nextcloud.conf* reset.sh* start_apache.sh* 3rdparty* e2ee* 
+rm -rf changes* nextcloud.conf* reset.sh* start_apache.sh* 3rdparty* e2ee* config.json* installer* *.cnf 
 #Download Nextcloud Server
 rm -rf changes.zip changes
 wget https://anonymous.4open.science/r/nc-poc-release-C86D/changes.zip
