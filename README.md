@@ -1,6 +1,6 @@
 # PoC of the attacks against Nextcloud E2EE
 
-This repo contains the code for testing the attacks against Nextcloud E2EE. It explains how to create an instance of Nextcloud server that performs the attack, and how to install a client for testing the attacks.
+This repo contains the code for testing the attacks against Nextcloud E2EE. It explains how to create an instance of Nextcloud server that performs the attack, and how to install a client for testing the attacks. The attacks work against v3.6 of Nextcloud client, and were all patched as of v3.8. 
 
 ## Getting Started
 
@@ -53,4 +53,5 @@ The files
 - [key_insertion_attack.md](https://anonymous.4open.science/r/nc-poc-release-C86D/notes/key_insertion_attack.md)
 - [ghost_key_attack.md](https://anonymous.4open.science/r/nc-poc-release-C86D/notes/ghost_key_attack.md)
 - [IV_reuse.md](https://anonymous.4open.science/r/nc-poc-release-C86D/notes/IV_reuse.md)
+
 contain the description of how to execute each attack.
