@@ -15,7 +15,7 @@ Attack setup:
   1. SSH into the server
   2. Change directory to /var/www/nextcloud/poc
   3. Start the script attack_server.py executing the command 
-        ```sudo python3 attack_server.py e2e_add_metadata```
+        ```sudo python3 attack_server.py e2e_add_metadata_key```
 
 The script will decrypt the uploaded metadata and files using the chosen metadata key. 
 

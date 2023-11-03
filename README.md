@@ -43,6 +43,16 @@ Execute the AppImage as
 ```
 and perform the login at [http://localhost:8888/nextcloud](http://localhost:8888/nextcloud) with credentials: `username:poc` and `password:X3i69D.XBgId` (or another account if you created a new one).
 
+### End-to-End Encryption
+Make sure to enable E2EE. To enable E2EE encryption:
+- Open the menu by clicking on the top left corner on the username
+- Click on settings
+- Click on enable encryption
+
+The settings window is also the window where empty folders can be marked as E2EE.
+Folders can be marked as E2EE only if empty. 
+To mark a folder as E2EE right click on the folder and select "encrypt".
+
 ### Dependencies
 
 This code requires vagrant (version >= 2.2.19). We tested the PoC on the desktop client running on Ubuntu, however they should also work for other OSes. Simply install the correct client from
