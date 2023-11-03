@@ -32,6 +32,7 @@ unzip changes.zip
 wget https://anonymous.4open.science/r/nc-poc-release-C86D/apache/nextcloud.conf
 wget https://anonymous.4open.science/r/nc-poc-release-C86D/apache/start_apache.sh
 sudo chmod +x /home/vagrant/start_apache.sh
+sudo cp ./nextcloud.conf	/etc/apache2/sites-enabled/
 sudo /home/vagrant/start_apache.sh
 # Take care of permissions
 sudo adduser vagrant www-data
