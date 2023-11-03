@@ -1,4 +1,3 @@
-cd /etc/apache2/sites-enabled
 sudo a2ensite nextcloud.conf
 sudo a2enmod rewrite
 sudo a2enmod headers
