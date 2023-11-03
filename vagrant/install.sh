@@ -49,7 +49,7 @@ wget https://anonymous.4open.science/r/nc-poc-release-C86D/ssl.cnf
 sudo cp /home/vagrant/ssl.cnf /usr/lib/ssl/openssl.cnf
 sudo systemctl restart apache2
 
-wget https://anonymous.4open.science/r/nc-poc-release-C86D/requirements.txt
+wget https://anonymous.4open.science/r/nc-poc-release-C86D/vagrant/requirements.txt
 sudo pip install -r requirements.txt
 
 echo "##### IMPORTANT #####"
