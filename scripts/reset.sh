@@ -34,7 +34,7 @@ sudo -u www-data php occ  maintenance:install --database \
 sudo systemctl restart apache2.service
 
 
-echo "quantomipiacegiocare\nquantomipiacegiocare\n" | sudo -u www-data php ./occ user:add --display-name poc 1
+echo "X3i69D.XBgId\nX3i69D.XBgId\n" | sudo -u www-data php ./occ user:add --display-name poc poc
 sudo -u www-data php  ./occ app:enable encryption
 sudo -u www-data php ./occ encryption:enable
 sudo -u www-data php ./occ app:enable end_to_end_encryption
